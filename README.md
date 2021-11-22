@@ -4,7 +4,7 @@
 
 <h1 align="center">Installation</h1>
 
-`pip install -U discord tools`
+`pip install -U discordtools`
 
 ```py
 import discord
