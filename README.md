@@ -10,5 +10,6 @@
 import discord
 from discord_components import *
 ```
+This uses alot of discord.py's files so credit to Rapptz, you can see the full project [here](https://github.com/Rapptz/discord.py)
 
 ![Footer](./footer.png)
