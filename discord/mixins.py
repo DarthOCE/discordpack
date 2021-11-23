@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+"""
 The MIT License (MIT)
 
 Copyright (c) 2015-present Rapptz
@@ -19,3 +22,21 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+"""
+
+class EqualityComparable:
+    __slots__ = ()
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and other.id == self.id
+
+    def __ne__(self, other):
+        if isinstance(other, self.__class__):
+            return other.id != self.id
+        return True
+
+class Hashable(EqualityComparable):
+    __slots__ = ()
+
+    def __hash__(self):
+        return self.id >> 22
