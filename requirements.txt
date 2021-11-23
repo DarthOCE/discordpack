@@ -1,3 +1,4 @@
 aiohttp>=3.6.0,<3.8.0
 discord_components
 discord-py-slash-command
+discord-py-interactions
